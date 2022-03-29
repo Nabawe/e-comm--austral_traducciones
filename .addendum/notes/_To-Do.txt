@@ -1,0 +1,15 @@
+! Add SEO
+! Add Description
+! Fonts
+
+
++ Improve Fav Icon
+
+
++ Update manifest.json
+
+
++ Change all Logos and Favicons to svg or webp
+
+
++ Fix Logo

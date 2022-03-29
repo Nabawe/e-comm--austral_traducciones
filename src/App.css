@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.p-nav--logo {
+  width: 50%;
+  height: 50%;
+  /* aspect-ratio: 1; */
+}
+
+.p-nav--logo--mobile {
+  width: 15%;
+  height: 15%;
+  /* aspect-ratio: 1; */
+}

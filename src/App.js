@@ -1,14 +1,14 @@
-import logo from './logo.svg';
+import React from "react";
+import Header from "./Components/Header";
+// import { Container, Nav, Navbar as BootstrapNavbar, NavDropdown } from 'react-bootstrap';
 import './App.css';
 
-function App() {
+// ! Intentar sacarle el nombre a la f default
+export default function App() {
     return (
-        <div className="App">
-            <p>
-                "Hello World"
-            </p>
-        </div>
+        <>
+            <Header />
+        </>
     );
-}
+};
 
-export default App;
