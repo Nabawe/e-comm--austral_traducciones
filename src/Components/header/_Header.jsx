@@ -1,9 +1,9 @@
 import Navbar from "./Navbar";
 
-export default function Header() {
+export default function Header({ env }) {
     return (
         <>
-            <Navbar />
+            <Navbar env={ env } />
         </>
     );
 };

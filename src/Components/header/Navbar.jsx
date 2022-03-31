@@ -11,11 +11,12 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 // Custom Imports
-import logo_small_menu from "../img/logo-small-menu.png"
+import logo_small_menu from "../../img/logo-small-menu.png"
+import WidgetCart from './WidgetCart';
 
 const pages = ['Contacto', 'Interpretación', 'Traducción'];
 
-export default function Navbar() {
+export default function Navbar({ env }) {
     const [anchorElNav, setAnchorElNav] = React.useState( null );
 
     const handleOpenNavMenu = ( event ) => {
@@ -26,17 +27,10 @@ export default function Navbar() {
         setAnchorElNav( null );
     };
 
-    const colors = {
-        main:       "#02355A",
-        secondary:  "#FFFFFF",
-        accent:     "#E8522B",
-        bg:         "#FFFFFF"
-    };
-
     return (
         <AppBar position="static"
             // ? Hay mejor forma de hacer esto? https://mui.com/customization/how-to-customize/
-            sx={{ backgroundColor: colors.main }}
+            sx={{ backgroundColor: env.colors.main }}
         >
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
@@ -47,6 +41,7 @@ export default function Navbar() {
                         sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
                     >
                         {/* WIP Modificar esto por Button, Link, IconButton o lo q sea correcto, talvez sea necesario q la clase en mobile sea tratada distinta y en vez de especificar el tamaño de la imagen q el contenedor se ajuste al tamaño de la nav y la imagen al tamaño de su contenedor */}
+                            {/* Ya me contesto esto pero necesito entender más antes de cambiarlo */}
                         <img className="p-nav--logo" src={ logo_small_menu } alt="Logo" />
                     </Typography>
 
@@ -86,6 +81,7 @@ export default function Navbar() {
                             ) )}
                         </Menu>
                     </Box>
+
                     <Typography
                         variant="h6"
                         noWrap
@@ -93,6 +89,7 @@ export default function Navbar() {
                         sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
                     >
                         {/* WIP Modificar esto por Button, Link, IconButton o lo q sea correcto, talvez sea necesario q la clase en mobile sea tratada distinta y en vez de especificar el tamaño de la imagen q el contenedor se ajuste al tamaño de la nav y la imagen al tamaño de su contenedor */}
+                                {/* Ya me contesto esto pero necesito entender más antes de cambiarlo */}
                         <img className="p-nav--logo--mobile" src={ logo_small_menu } alt="Logo" />
                     </Typography>
 
@@ -107,6 +104,8 @@ export default function Navbar() {
                             </Button>
                         ) )}
                     </Box>
+
+                    <WidgetCart />
                 </Toolbar>
             </Container>
         </AppBar>

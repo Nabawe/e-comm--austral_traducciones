@@ -1,0 +1,8 @@
++ Pork App.js no es un .jsx? hay alguna razon? ya q nosotros hacemos los componentes en jsx para q HTML este integrado más naturalmente no?.
+
++ En App.js ver debajo de const env = {};
+
++ El usar Item como nombre de un componente me puede dar problemas? hay forma de ver palabras reservadas? yo intento prestarle atencion al itellisense q me va diciendo para ver si estoy sobre escribiendo algo pero en el caso de Items, item y etc no me quedo claro.
+
+
++ header/Navbar.jsx  ? Hay mejor forma de hacer esto? https://mui.com/customization/how-to-customize/
