@@ -12,4 +12,10 @@
 + Change all Logos and Favicons to svg or webp
 
 
-+ Fix Logo
++ Fix Logo, Remove <Typography />
+
+
++ Modificar index.css
+
+
++ Limpiar index.html

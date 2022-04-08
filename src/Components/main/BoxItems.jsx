@@ -1,16 +1,10 @@
-import Item from "../../Components/main/Item";
+import React from 'react';
+import ItemCounter from './ItemCounter.jsx';
 
-export default function BoxItems({ env }) {
+export default function BoxItems() {
     return (
         <>
-            <p>{ env.messages.greeting }</p>
-            <ul>
-                <li><Item /></li>
-                <li><Item /></li>
-                <li><Item /></li>
-                <li><Item /></li>
-                <li><Item /></li>
-            </ul>
+            <ItemCounter min={ 0 } stock={ 5 } />
         </>
     );
 };

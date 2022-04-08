@@ -1,7 +1,10 @@
-export default function Item({ env }) {
+import React from 'react';
+
+export default function Item() {
+
     return (
         <>
-            <p><emphasis>Hola soy un item.</emphasis></p>
+            <p>Hola soy un item.</p>
         </>
     );
 };

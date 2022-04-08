@@ -1,0 +1,11 @@
+.p_nav__logo {
+  width: 50%;
+  height: 50%;
+  /* aspect-ratio: 1; */
+}
+
+.p_nav__logo__mobile {
+  width: 15%;
+  height: 15%;
+  /* aspect-ratio: 1; */
+}

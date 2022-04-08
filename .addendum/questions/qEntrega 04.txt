@@ -1,0 +1,36 @@
++ Esta pregunta tiene sentido para el estado de la Entrega 3; en el AfterClass correspondiente pregunte si era necesario agregar un key en el caso de tener 2 Navbar, la Tutora me respondio q si ya q cada componente debe ser único en React pero yo habia agregado varios <Item /> y la consola no mostro error alguno. Cual es el criterio? O solo aplica a cosas generadas en la marcha como cuando hacemos con Map?.
+
+
++ Todos los componentes requieren la linea import React from 'react'; ? Me di cuenta revisando esto y BoxItems no lo tenia en la entrega anterior. Tambien en Navbar tenia :
+    import * as React from 'react';
+
+    en vez de
+
+    import React from 'react';
+
+Modifique esto pero si lo saco no da error. Como siempre cual es el criterio? Ya q uno intuiria q para q sea un componente de react obviamente necesita esa linea... pero tal vez es mal uso abusarla.
+
+
++ Borro index.css e index.js? Para q sirven?
+
+
++ Esta es una pregunta q me hago a mi mismo pero la dejo aqui ya q no tuve tiempo de resolverla: ¿Como hago para q App.css o App.js o index.html tomen los valores de src/style.style.js? Definir <body> en App.js estara mal? (Ya q React trabajaba en la root div, y crear algo q suplante a la root div dentro de App.js tambien parece mala practica) El objetivo es definir background color para toda la App usando lo definido en style.js.
+    myElement.style.setProperty('--element-height', height + 'px')
+        Esto es medio forzado y en realidad el flujo queda al revez forzandome a crear algo en js para q cargue los valores...
+
+
++ App.js No se si utilize bien <CssBaseline />, por eso comente los resets en App.css
+
+
++ ItemCounter.jsx la forma correcta de hacer esto seria editando un Componente Typography para que quede como uno Button? o es valido:
+    <Button>{ y }</Button>
+
+
++ ItemCounter.jsx no ejecutar onAdd si no hay stock
+    La descripcion del desafio pedia q no se LLAME la callback, pero esta es llamada a travez de un onClick. Yo coloque así:
+    const onAdd = () => {
+        if ( y )
+            alert( y + msg.onAdd );
+    };
+
+    Ya q al modificar "y" ya se checkea el estado del stock y siempre empiesa con un valor inicial pasado por prop, podria cambiarlo a y || stock pero en realidad si quiero seguir completamente lo q dice el desafio debería crear otra funcion q es diparada por el boton Comprar q primero checkea el stock y luego ahi llama el onAdd, me parecia q no tenia sentido así q lo puse de ese modo.
