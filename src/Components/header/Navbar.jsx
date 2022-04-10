@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 // MUI Imports
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -19,7 +19,7 @@ import WidgetCart from './WidgetCart';
 const pages = ['Contacto', 'Interpretación', 'Traducción'];
 
 export default function Navbar() {
-    const [anchorElNav, setAnchorElNav] = React.useState( null );
+    const [anchorElNav, setAnchorElNav] = useState( null );
 
     const handleOpenNavMenu = ( event ) => {
         setAnchorElNav( event.currentTarget );
@@ -107,7 +107,9 @@ export default function Navbar() {
                         ) )}
                     </Box>
 
-                    <WidgetCart />
+                    <Box sx={{ flexGrow: 0 }}>
+                        <WidgetCart />
+                    </Box>
                 </Toolbar>
             </Container>
         </AppBar>

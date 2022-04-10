@@ -1,4 +1,3 @@
-import React from 'react';
 // MUI Imports
 import Badge from '@mui/material/Badge';
 import IconButton from '@mui/material/IconButton';

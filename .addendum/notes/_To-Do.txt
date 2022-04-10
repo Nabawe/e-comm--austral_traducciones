@@ -19,3 +19,30 @@
 
 
 + Limpiar index.html
+
+
++ [feature, localization] q los mensajes sean el resultado de una funcion q reciva los parametros variables y retorne la string con el mensaje a mostrar. Las opciones q se me ocurren son:
+    - Regex
+
+    - eval or new Function
+        https://stackoverflow.com/questions/29182244/convert-a-string-to-a-template-string
+        https://stackoverflow.com/questions/57565794/how-would-you-turn-a-javascript-variable-into-a-template-literal
+            let a = "b:${b}";
+            let b = 10;
+            let tpl = eval('`'+a+'`');
+
+            El propblema de muchas de las soluciones q muestran aqui q usan regex tonces me parece como desperdicio. Tambien estan los temas de seguridad contra codigo dinamico.
+
+    - Generalizar una funcion Tag de Template Literals
+        https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates
+
+    - Q cada mensaje sino tenga una forma de especificar sus partes variables, partes estaticas y su orden o como se ensamblan, ejemplo usando maps o ver algun tipo de objeto q respete el orden:
+        onAdd: [
+            "El carrito contiene ",
+            cant: 0,
+            " del item."
+        ]
+            cant: 0 , o undefined, o etc se usaria para initializar.
+
+    Esto es importante por varios motivos y se vuelve obvio cuando distintos idiomas usan distinto orden.
++

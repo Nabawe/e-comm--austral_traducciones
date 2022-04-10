@@ -1,4 +1,3 @@
-import React from 'react';
 import ItemCounter from './ItemCounter.jsx';
 
 export default function BoxItems() {
