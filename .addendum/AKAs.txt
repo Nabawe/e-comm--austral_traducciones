@@ -1,7 +1,9 @@
 
-CartWidged.jsx                      WidgetCart.jsx
+CartWidged.jsx                      CartWidged.jsx
+Item.jsx                            Item.jsx
 ItemCount.jsx                       ItemCounter.jsx
-ItemListContainer.jsx               BoxItems.jsx
+ItemList.jsx                        ItemList.jsx
+ItemListContainer.jsx               ItemListContainer.jsx
 NavBar.jsx                          Navbar.jsx
 
 

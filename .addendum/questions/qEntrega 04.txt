@@ -16,7 +16,7 @@
 
 
 + Todos los componentes requieren la linea import React from 'react'; ?
-    Me di cuenta revisando esto y BoxItems no lo tenia en la entrega anterior. Tambien en Navbar tenia :
+    Me di cuenta revisando esto y ItemListContainer no lo tenia en la entrega anterior. Tambien en Navbar tenia :
         import * as React from 'react';
 
         en vez de

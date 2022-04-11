@@ -1,9 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 // import { Container, Nav, Navbar as BootstrapNavbar, NavDropdown } from 'react-bootstrap';
 import './App.css';
 import CssBaseline from '@mui/material/CssBaseline';
-import BoxItems from "./Components/main/BoxItems";
+import ItemListContainer from "./Components/main/ItemListContainer";
 import Navbar from "./Components/header/Navbar";
 
 
@@ -18,7 +19,7 @@ export default function App() {
                 </header>
 
                 <main>
-                    <BoxItems />
+                    <ItemListContainer />
                 </main>
 
                 <footer>
