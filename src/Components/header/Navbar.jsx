@@ -16,6 +16,7 @@ import css from "./Navbar.module.css";
 import logo_small_menu from "../../img/logo-small-menu.png";
 import CartWidged from './CartWidged';
 
+
 const pages = ['Contacto', 'Interpretación', 'Traducción'];
 
 export default function Navbar() {

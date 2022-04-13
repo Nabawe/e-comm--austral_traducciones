@@ -1,13 +1,29 @@
-CoderHouse                          Yo
-
-CartWidged.jsx                      CartWidged.jsx
-Item.jsx                            Item.jsx
-ItemCount.jsx                       ItemCounter.jsx
-ItemList.jsx                        ItemList.jsx
-ItemListContainer.jsx               ItemListContainer.jsx
-NavBar.jsx                          Navbar.jsx
++ Components
++ Events
++ Functions
 
 
+    CoderHouse                          Yo
 
 
-onAdd                               onAdd
++ Components
+    CartWidged                          CartWidged
+    Item                                Item
+    ItemCount                           ItemCounter
+    ItemDetail                          ItemDetail
+    ItemDetailContainer                 ItemDetailContainer
+    ItemList                            ItemList
+    ItemListContainer                   ItemListContainer
+    NavBar                              Navbar
++
+
+
++ Events
+    onAdd                               onAdd
++
+
+
+
++ Functions
+    getItem                             getItem
++

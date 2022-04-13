@@ -1,13 +1,13 @@
-let TestWitness = true;
+let MockResult = true;
 
-export default function packsFetch( time, data ) {
+export default function f_fetchPacks( time, data ) {
     return new Promise( ( resolve, reject ) => {
         setTimeout( () => {
-            if ( TestWitness ) {
+            if ( MockResult ) {
                 resolve( data );
             } else {
                 reject( "Failed" );
             };
-        } );
-    }, time );
+        },  time );
+    } );
 };

@@ -5,6 +5,7 @@ import ButtonGroup from '@mui/material/ButtonGroup';
 import style from "../../style/style.js";
 import msg from './ItemCounter.msg.js'
 
+
 export default function ItemCounter( { min, stock } ) {
     const [qty, setQty] = useState( min );
 
