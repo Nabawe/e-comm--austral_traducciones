@@ -11,6 +11,7 @@
 
 + JavaScript
     g_globalVar
+    g_GlobalObject
     g_in_var
         global input var
     f_function

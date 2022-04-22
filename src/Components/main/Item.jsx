@@ -8,11 +8,11 @@ import ItemCounter from './ItemCounter.jsx';
 
 
 // export default function Item( { id, name, price, currency, priceUnit, cat, stock, min, pic, picAlt, desc } ) {
-// Me falta usar cat
+// ! WIP - Me falta usar cat
 export default function Item( { i } ) {
     return (
         <>
-            <Card key={ i.id } sx={{ display: 'flex' }}>
+            <Card sx={{ display: 'flex' }}>
                 <CardMedia
                     component="img"
                     sx={{ width: 151, height: 200 }}

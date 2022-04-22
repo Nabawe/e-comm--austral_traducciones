@@ -16,7 +16,7 @@ export default function ItemListContainer() {
 
     return (
         <>
-            <ItemList packs={ data }/>
+            <ItemList packs={ data } />
         </>
     );
 };

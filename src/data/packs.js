@@ -63,7 +63,7 @@ const packs = [
         pic:            "https://i.picsum.photos/id/675/200/300.jpg?hmac=c2gHO4_1hIFBRijtOhz09icBTxsdGCsMSYSs2XIDdAk",
         picAlt:         "rqwiorhqworihqworihqqwpohjrqpowjrh",
         desc:           `lorem lorem LORO asdfasdfasdfasdasdfsadfafsdfasdfasdfasdfsadfasdf`
-    },
+    }
 ];
 
 export default packs;
