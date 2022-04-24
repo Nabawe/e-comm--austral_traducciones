@@ -1,6 +1,6 @@
 const msg = {
     onAdd:       " del item hay en tu carrito de compras.",
-    purchase:    "Agregar",
+    addToCart:   "Agregar",
     outOfStock:  "item sin stock."
 };
 

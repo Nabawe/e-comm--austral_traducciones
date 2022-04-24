@@ -8,14 +8,14 @@ import msg from './ItemCounter.msg.js'
 
 export default function ItemCounter( { min, stock } ) {
     const [isOutOfStock, setIsOutOfStock] = useState( false );
-    const [qty, setQty] = useState( min );
+    const [qty, setQty] = useState( ( stock < min ? stock : min ) );
 
     useEffect( () => {
         ( qty >= min ) ?
             setIsOutOfStock( false )
             :
             setIsOutOfStock( true );
-    }, [ qty, min ] );
+    }, [ qty, min ] ); /* Porque necesito agregar min? */
 
     const add = () => {
         if ( qty < stock )
@@ -23,8 +23,8 @@ export default function ItemCounter( { min, stock } ) {
     };
 
     const sub = () => {
-        if ( qty < min )
-            return alert( msg.outOfStock );
+        if ( qty < min ) /* ! Esto no se debería cumplir vez alguna ya q esta isOutOfStock */
+            return alert( msg.outOfStock ); /* No causa problema q ponga return aquí? */
         if ( qty > min )
             setQty( qty - 1 );
     };
@@ -41,7 +41,7 @@ export default function ItemCounter( { min, stock } ) {
     return (
         <>
             <Box sx={{ bgcolor: g_Styles.colors.bg_c }}>
-                <ButtonGroup variant="outlined" aria-label="outlined button group">
+                <ButtonGroup variant="outlined" aria-label="outlined button group" disabled={ isOutOfStock }>
                     <Button onClick={ sub }>-</Button>
                     <Button onClick={ clr }>{ qty }</Button>
                     <Button onClick={ add }>+</Button>
