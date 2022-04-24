@@ -1,4 +1,4 @@
-const style = {
+const g_Styles = {
     colors: {
         main:           "#02355A",
         secondary:      "#FFFFFF",
@@ -8,4 +8,4 @@ const style = {
     }
 };
 
-export default style;
+export default g_Styles;

@@ -11,7 +11,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 // Custom Imports
-import style from "../../style/style.js";
+import g_Styles from "../../style/g_Styles.js";
 import css from "./Navbar.module.css";
 import logo_small_menu from "../../img/logo-small-menu.png";
 import CartWidged from './CartWidged';
@@ -33,7 +33,7 @@ export default function Navbar() {
     return (
         <AppBar position="static"
             // ? Hay mejor forma de hacer esto? https://mui.com/customization/how-to-customize/
-            sx={{ backgroundColor: style.colors.main }}
+            sx={{ backgroundColor: g_Styles.colors.main }}
         >
             <Container maxWidth="xl">
                 <Toolbar disableGutters>

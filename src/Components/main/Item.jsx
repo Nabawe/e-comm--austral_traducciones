@@ -8,11 +8,11 @@ import ItemCounter from './ItemCounter.jsx';
 
 
 // export default function Item( { id, name, price, currency, priceUnit, cat, stock, min, pic, picAlt, desc_short } ) {
-// Me falta usar cat
+// ! WIP - Me falta usar cat
 export default function Item( { i } ) {
     return (
         <>
-            <Card key={ i.id } sx={{ display: 'flex' }}>
+            <Card sx={{ display: 'flex' }}>
                 <CardMedia
                     component="img"
                     /* Originalmente eran 200 y 300 lo dividi a la mitad y agregue 1 de altura ya q sino quedaba un borde blanco debajo, y cambiar la alineacion o agregar margen era peor, creo q la unidad no son pixeles */
