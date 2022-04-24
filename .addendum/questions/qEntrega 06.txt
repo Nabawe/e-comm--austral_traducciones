@@ -1,13 +1,52 @@
 + Sobre Paginar Resultados, ItemListContainer.jsx
 + Es incorrecto q use <Stack /> en ItemList.jsx?
++ Buenas Practicas para Popper Elements
++ Randomizar Pic, Stock, Min
++ Sobre pasar props usando spread operator
 
 
 + Sobre Paginar Resultados, ItemListContainer.jsx
     Ver si hay forma de directamente pedir menor cantidad de resultados en vez d usar algo similar a slice q depende de traer todos primero.
+
+    Antes del filter.
 
     Sobre paginar, paginas virtuales, fetch.
 +
 
 
 + Es incorrecto q use <Stack /> en ItemList.jsx?
++
+
+
++ Buenas Practicas para Popper Elements
+    Algo q me quito una buena cantidad de tiempo en esta entrega fue la creación de la card y como mostrarla, investigando sobre Popper, Popover, Portal, Modal q son conceptos q no vi en el primer curso de CoderHouse, si tenes algo para ayudarme a refinar mi entendimiento general te lo agradeceria.
+    También era para pedirte buenas practicas en especial en el tema de como manejar Portals ya q parece q usan un DOM separado pero no entiendo completamente las justificaciones.
++
+
+
++ Randomizar Pic, Stock, Min
+    Me arme el siguiente Mock https://www.mockaroo.com/schemas/406482
+
+    Y en la linea q dice
+        https://picsum.photos/200/300/?####
+
+    Pero en relidad para garantizar q no salga el mismo pic tendria q usar una secuencia de números ya q si son random podria salir el mismo pic, era por si sabias como hacerlo o si tenia q usar un regex.
+
+    También como puse stock de 1 a 10 y min de 1 a 3 se puede dar la condición de agotado de 0, es esto un problema para el proyecto?. Raramente me parece q esa situacion no se autogenero, q tendria q cambiar para q pase? lo cambie manualmente para el segundo item.
++
+
+
++ Sobre pasar props usando spread operator
+    AfterClass 5, creo q en la plataforma esta como "Clase complementaria de Repaso + Desafío" la marca como la 6 pero es incorrecta ya q la 5 habia sido cancelada.
+
+    31'43 - No estoy completamente seguro q es mejor, ya q pasando el objeto me parese más flexible y legible si son muchas pero esta bueno detallar por props lo q recibe un componente.
+
+    33'58 - Mejorandolo con destructuring
+        Pero al usar Objeto.Punto te ayuda a evitar sobre escribir.
+
+    34'22 - Notación (props)
+        No recuerdo q hayamos dado esta en el curso.
+        Solo le veo desventajas, estoy equivocado?.
+
+    Si me responde depende del caso por favor deme algun criterio.
 +

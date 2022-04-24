@@ -15,7 +15,8 @@ export default function Item( { i } ) {
             <Card key={ i.id } sx={{ display: 'flex' }}>
                 <CardMedia
                     component="img"
-                    sx={{ width: 151, height: 200 }}
+                    /* Originalmente eran 200 y 300 lo dividi a la mitad y agregue 1 de altura ya q sino quedaba un borde blanco debajo, y cambiar la alineacion o agregar margen era peor, creo q la unidad no son pixeles */
+                    sx={{ width: 100, height: 151 }}
                     image={ i.pic }
                     alt={ i.picAlt }
                 />

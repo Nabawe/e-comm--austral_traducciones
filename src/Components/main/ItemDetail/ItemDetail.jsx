@@ -12,20 +12,21 @@ import ItemCounter from '../ItemCounter.jsx';
 export default function ItemDetail( { i } ) {
     return (
         <>
-            <Card sx={{ display: 'flex' }}>
+            <Card sx={{ display: 'flex', width: 1000, height: 350, alignItems: 'center' }}>
                 <CardMedia
                     component="img"
-                    sx={{ width: 151, height: 200 }}
+                    sx={{ width: 200, height: 300 }}
                     image={ i.pic }
                     alt={ i.picAlt }
                 />
-                <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+                {/* WIP Deberia ser justifyContent: 'space-between' */}
+                <Box sx={{ display: 'flex', flexDirection: 'column', rowGap: 10 }}>
                     <CardContent sx={{ flex: '1 0 auto' }}>
                         <Typography component="div" variant="h7">
                             { i.name }
                         </Typography>
                         <Typography variant="subtitle1" color="text.secondary" component="div">
-                            { i.desc_short }
+                            { i.desc_long }
                         </Typography>
                         <Typography variant="subtitle2" color="text.secondary" component="div">
                             ${ i.price }({ i.currency }) / { i.priceUnit}

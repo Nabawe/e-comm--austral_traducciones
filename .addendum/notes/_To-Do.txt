@@ -46,3 +46,6 @@
 
     Esto es importante por varios motivos y se vuelve obvio cuando distintos idiomas usan distinto orden.
 +
+
+
+! [strings, messages] Revisar q las strings sean coerentes, en vez de q digan algo como item o producto q hagan referencia a los correctos servicios.

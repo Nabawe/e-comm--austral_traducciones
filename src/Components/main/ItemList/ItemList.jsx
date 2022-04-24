@@ -8,6 +8,7 @@ export default function ItemList( { packs } ) {
 
         <Stack
             spacing={{ xs: 1, sm: 2, md: 4 }}
+            sx={{ width: '90%'}}
         >
             {
                 packs.map( p => ( <Item key={ p.id } i={ p } /> ) )

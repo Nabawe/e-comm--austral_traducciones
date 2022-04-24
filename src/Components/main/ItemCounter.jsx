@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
@@ -7,7 +7,15 @@ import msg from './ItemCounter.msg.js'
 
 
 export default function ItemCounter( { min, stock } ) {
+    const [isOutOfStock, setIsOutOfStock] = useState( false );
     const [qty, setQty] = useState( min );
+
+    useEffect( () => {
+        ( qty >= min ) ?
+            setIsOutOfStock( false )
+            :
+            setIsOutOfStock( false );
+    }, [ qty, min ] );
 
     const add = () => {
         if ( qty < stock )
@@ -15,6 +23,8 @@ export default function ItemCounter( { min, stock } ) {
     };
 
     const sub = () => {
+        if ( qty < min )
+            return alert( msg.outOfStock );
         if ( qty > min )
             setQty( qty - 1 );
     };
