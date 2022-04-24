@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import f_fetchPacks from '../../../fetch/f_fetchPacks.js';
-import packs from '../../../data/packs.js';
+import packs from '../../../data/packs_500.json';
 import ItemList from './ItemList.jsx';
 
 
@@ -10,13 +10,14 @@ export default function ItemListContainer() {
 
     useEffect( () => {
         f_fetchPacks( 2000, packs )
-            .then( result => setData( result ) )
-            .catch( error => console.log( "Error: ", error ) );
+            .then( result => { setData( result ) } )
+            .catch( error => { console.log( "Error: ", error ) } );
     },  [ data ] );
+
 
     return (
         <>
-            <ItemList packs={ data }/>
+            <ItemList packs={ data.slice( 0, 20 ) }/>
         </>
     );
 };

@@ -1,0 +1,13 @@
++ Sobre Paginar Resultados, ItemListContainer.jsx
++ Es incorrecto q use <Stack /> en ItemList.jsx?
+
+
++ Sobre Paginar Resultados, ItemListContainer.jsx
+    Ver si hay forma de directamente pedir menor cantidad de resultados en vez d usar algo similar a slice q depende de traer todos primero.
+
+    Sobre paginar, paginas virtuales, fetch.
++
+
+
++ Es incorrecto q use <Stack /> en ItemList.jsx?
++

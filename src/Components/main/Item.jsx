@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import ItemCounter from './ItemCounter.jsx';
 
 
-// export default function Item( { id, name, price, currency, priceUnit, cat, stock, min, pic, picAlt, desc } ) {
+// export default function Item( { id, name, price, currency, priceUnit, cat, stock, min, pic, picAlt, desc_short } ) {
 // Me falta usar cat
 export default function Item( { i } ) {
     return (
@@ -25,7 +25,7 @@ export default function Item( { i } ) {
                             { i.name }
                         </Typography>
                         <Typography variant="subtitle1" color="text.secondary" component="div">
-                            { i.desc }
+                            { i.desc_short }
                         </Typography>
                         <Typography variant="subtitle2" color="text.secondary" component="div">
                             ${ i.price }({ i.currency }) / { i.priceUnit}
