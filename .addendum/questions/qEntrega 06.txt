@@ -3,6 +3,7 @@
 + Buenas Practicas para Popper Elements
 + Randomizar Pic
 + Sobre pasar props usando spread operator
++ Uso de React Fragments
 
 
 + Sobre Paginar Resultados, ItemListContainer.jsx
@@ -47,4 +48,12 @@
         Solo le veo desventajas, estoy equivocado?.
 
     Si me responde depende del caso por favor deme algun criterio.
++
+
+
++ Uso de React Fragments
+    <> </>
+    <div> </div>
+    Corrijame si estoy equivocado pero son solo para cuando tengo q retornar más de un componente, pero tanto en los snippets como en los afters y demas me parece q se lo agregan a todo... yo acabo de limpiar los q me parecian q sobraban pero en Item.jsx Visual me marca todo el return con una linea amarilla, negra y roja pero ninguna consola me da error alguno.
+    Si le agrego un tab de más se va la linea, si coloco format document vuelve.
 +

@@ -16,8 +16,6 @@ export default function ItemListContainer() {
 
 
     return (
-        <>
-            <ItemList packs={ data.slice( 0, 20 ) }/>
-        </>
+        <ItemList packs={ data.slice( 0, 20 ) }/>
     );
 };

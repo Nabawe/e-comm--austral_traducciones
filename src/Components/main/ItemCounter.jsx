@@ -39,15 +39,13 @@ export default function ItemCounter( { min, stock } ) {
     };
 
     return (
-        <>
-            <Box sx={{ bgcolor: g_Styles.colors.bg_c }}>
-                <ButtonGroup variant="outlined" aria-label="outlined button group" disabled={ isOutOfStock }>
-                    <Button onClick={ sub }>-</Button>
-                    <Button onClick={ clr }>{ qty }</Button>
-                    <Button onClick={ add }>+</Button>
-                </ButtonGroup>
-                <Button disabled={ isOutOfStock } onClick={ onAdd }>{ isOutOfStock ? msg.outOfStock : msg.addToCart }</Button>
-            </Box>
-        </>
+        <Box sx={{ bgcolor: g_Styles.colors.bg_c }}>
+            <ButtonGroup variant="outlined" aria-label="outlined button group" disabled={ isOutOfStock }>
+                <Button onClick={ sub }>-</Button>
+                <Button onClick={ clr }>{ qty }</Button>
+                <Button onClick={ add }>+</Button>
+            </ButtonGroup>
+            <Button disabled={ isOutOfStock } onClick={ onAdd }>{ isOutOfStock ? msg.outOfStock : msg.addToCart }</Button>
+        </Box>
     );
 };
