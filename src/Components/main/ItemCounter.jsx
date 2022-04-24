@@ -24,7 +24,7 @@ export default function ItemCounter( { min, stock } ) {
 
     const sub = () => {
         if ( qty < min ) /* ! Esto no se debería cumplir vez alguna ya q esta isOutOfStock */
-            return alert( msg.outOfStock ); /* No causa problema q ponga return aquí? */
+            return alert( msg.onOutOfStock );
         if ( qty > min )
             setQty( qty - 1 );
     };
@@ -46,7 +46,7 @@ export default function ItemCounter( { min, stock } ) {
                     <Button onClick={ clr }>{ qty }</Button>
                     <Button onClick={ add }>+</Button>
                 </ButtonGroup>
-                <Button onClick={ onAdd }>{ msg.addToCart }</Button>
+                <Button disabled={ isOutOfStock } onClick={ onAdd }>{ isOutOfStock ? msg.outOfStock : msg.addToCart }</Button>
             </Box>
         </>
     );

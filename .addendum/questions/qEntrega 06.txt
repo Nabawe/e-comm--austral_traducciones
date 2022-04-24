@@ -1,7 +1,7 @@
 + Sobre Paginar Resultados, ItemListContainer.jsx
 + Es incorrecto q use <Stack /> en ItemList.jsx?
 + Buenas Practicas para Popper Elements
-+ Randomizar Pic, Stock, Min
++ Randomizar Pic
 + Sobre pasar props usando spread operator
 
 
@@ -24,15 +24,13 @@
 +
 
 
-+ Randomizar Pic, Stock, Min
++ Randomizar Pic
     Me arme el siguiente Mock https://www.mockaroo.com/schemas/406482
 
     Y en la linea q dice
         https://picsum.photos/200/300/?####
 
     Pero en relidad para garantizar q no salga el mismo pic tendria q usar una secuencia de números ya q si son random podria salir el mismo pic, era por si sabias como hacerlo o si tenia q usar un regex.
-
-    También como puse stock de 1 a 10 y min de 1 a 3 se puede dar la condición de agotado de 0, es esto un problema para el proyecto?. Raramente me parece q esa situacion no se autogenero, q tendria q cambiar para q pase? lo cambie manualmente para el segundo item.
 +
 
 

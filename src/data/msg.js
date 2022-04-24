@@ -1,5 +1,5 @@
 const msg = {
-    greeting:       "Hola Mundo !!!"
+    greeting:           "Hola Mundo !!!"
 };
 
 export default msg;
