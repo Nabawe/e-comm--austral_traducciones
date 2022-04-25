@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 
 import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import ClickAwayListener from '@mui/material/ClickAwayListener';
 import Popper from '@mui/material/Popper';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import Grow from '@mui/material/Grow';
 
 import f_fetchPacks from '../../../fetch/f_fetchPacks.js';
 import packs from '../../../data/packs_500.json';
@@ -15,65 +17,45 @@ export default function ItemDetailContainer() {
     // El desafio pide q devuelva un producto
     // Conciderar hacer otro componente para el popper
     useEffect( () => {
-        f_fetchPacks( 2000, packs )
+        f_fetchPacks( 50, packs ) /* Cambiar a 2000 */
             .then( result => { setData( result ) } )
             .catch( error => { console.log( "Error: ", error ) } );
     },  [ data ] );
 
-    // MUI Popper Code
-    const [anchorEl, setAnchorEl] = useState( null );
+    // MUI Popper and ClickAwayListener
+    const [ anchorEl, setAnchorEl]  = useState( null );
+    const [ open, setOpen ] = useState( false );
+    const id = open ? 'simple-popper' : undefined;
 
     const handleClick = ( event ) => {
-        setAnchorEl( anchorEl ? null : event.currentTarget );
+        setAnchorEl( event.currentTarget );
+        setOpen( open ? false : true );
     };
 
-    const open = Boolean(anchorEl);
-    const id = open ? 'simple-popper' : undefined;
-    const arrowRef = '<img src={ KeyboardArrowDownIcon } />'; /* ! WIP Aqui tendria q enviar una referencia a un elemento q sea la arrow en si */
+    const handleClickAway = () => {
+        setOpen( false );
+    };
 
     return (
         <>
-            <button aria-describedby={ id } type="button" onClick={ handleClick }>
-                    Toggle Popper
-            </button>
-            <Popper id={ id } open={ open } anchorEl={ anchorEl }
-                placement="top"
-                disablePortal={false}
-                modifiers={[
-                    {
-                        name: 'flip',
-                        enabled: true,
-                        options: {
-                            altBoundary: true,
-                            rootBoundary: 'document',
-                            padding: 8,
-                        },
-                    },
-                    {
-                        name: 'preventOverflow',
-                        enabled: true,
-                        options: {
-                            altAxis: true,
-                            altBoundary: true,
-                            tether: true,
-                            rootBoundary: 'document',
-                            padding: 8,
-                        },
-                    },
-                    {
-                        name: 'arrow',
-                        enabled: true,
-                        options: {
-                            element: arrowRef,
-                        },
-                    },
-                ]}
-            >
-                <Box sx={{ border: 1, p: 1, bgcolor: 'background.paper' }}>
-                    {/* { !!( data[2] ) && <ItemDetail i={ data[2] } /> } */}
-                    Test
+            <ClickAwayListener onClickAway={ handleClickAway }>
+                <Box>
+                    <Button aria-describedby={ id } variant="outlined" onClick= { handleClick }>
+                        Toggle Popper
+                    </Button>
+                        { open ? (
+                            <Popper id={ id } open={ open } anchorEl={ anchorEl } transition>
+                                {( { TransitionProps } ) => (
+                                    <Grow {...TransitionProps} timeout={350}>
+                                        <Box>
+                                            { !!( data[2] ) && <ItemDetail i={ data[2] } /> }
+                                        </Box>
+                                    </Grow>
+                                )}
+                            </Popper>
+                        ) : null }
                 </Box>
-            </Popper>
+            </ClickAwayListener>
         </>
     );
 };
