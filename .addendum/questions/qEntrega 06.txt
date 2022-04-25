@@ -4,6 +4,7 @@
 + Randomizar Pic
 + Sobre pasar props usando spread operator
 + Uso de React Fragments
++ ItemListContainer.jsx
 
 
 + Sobre Paginar Resultados, ItemListContainer.jsx
@@ -57,3 +58,21 @@
     Corrijame si estoy equivocado pero son solo para cuando tengo q retornar más de un componente, pero tanto en los snippets como en los afters y demas me parece q se lo agregan a todo... yo acabo de limpiar los q me parecian q sobraban pero en Item.jsx Visual me marca todo el return con una linea amarilla, negra y roja pero ninguna consola me da error alguno.
     Si le agrego un tab de más se va la linea, si coloco format document vuelve.
 +
+
+
++ ItemListContainer.jsx
+    setFetchWitness( true ); /* Esta Linea es necesaria? */
+
+    /* Hay forma de usar 1 sola variable y hacer algo tipo un case o if o else if o usar un array con las distintas condiciones ya q creo q deja mucho espacio a error esta forma */
+
+    /* Si la data no fue recibida y no hubo error como actual?
+    Mostrar data vieja? Mostrar Esqueleto?
+    Asumir q hubo error?*/
+
+    El tutor y el profesor usaban finally pero para mi solo se deberia continuar con la ejecución cuando el resultado del fetch es correcto. (  AfterClass 5 - 43'22 )
++
+
+
+
+
+Agregar las dudas de ItemCounter y lo q n me haya contestado por slack

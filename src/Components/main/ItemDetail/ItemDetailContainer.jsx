@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 import Box from '@mui/material/Box';
 import Popper from '@mui/material/Popper';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 import f_fetchPacks from '../../../fetch/f_fetchPacks.js';
 import packs from '../../../data/packs_500.json';
@@ -9,7 +10,7 @@ import ItemDetail from './ItemDetail.jsx';
 
 
 export default function ItemDetailContainer() {
-    const[ data, setData ] = useState( [] );
+    const [ data, setData ] = useState( [] );
 
     // El desafio pide q devuelva un producto
     // Conciderar hacer otro componente para el popper
@@ -28,7 +29,7 @@ export default function ItemDetailContainer() {
 
     const open = Boolean(anchorEl);
     const id = open ? 'simple-popper' : undefined;
-    const arrowRef = true; /* ! WIP CHECK THIS */
+    const arrowRef = '<img src={ KeyboardArrowDownIcon } />'; /* ! WIP Aqui tendria q enviar una referencia a un elemento q sea la arrow en si */
 
     return (
         <>
@@ -69,7 +70,8 @@ export default function ItemDetailContainer() {
                 ]}
             >
                 <Box sx={{ border: 1, p: 1, bgcolor: 'background.paper' }}>
-                    { !!( data[2] ) && <ItemDetail i={ data[2] } /> }
+                    {/* { !!( data[2] ) && <ItemDetail i={ data[2] } /> } */}
+                    Test
                 </Box>
             </Popper>
         </>

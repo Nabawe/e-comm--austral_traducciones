@@ -11,10 +11,7 @@ export default function ItemCounter( { min, stock } ) {
     const [qty, setQty] = useState( ( stock < min ? stock : min ) );
 
     useEffect( () => {
-        ( qty >= min ) ?
-            setIsOutOfStock( false )
-            :
-            setIsOutOfStock( true );
+        ( qty >= min ) ? setIsOutOfStock( false ) : setIsOutOfStock( true );
     }, [ qty, min ] ); /* Porque necesito agregar min? */
 
     const add = () => {
@@ -23,6 +20,8 @@ export default function ItemCounter( { min, stock } ) {
     };
 
     const sub = () => {
+        if ( qty === min )
+            return
         if ( qty < min ) /* ! Esto no se debería cumplir vez alguna ya q esta isOutOfStock */
             return alert( msg.onOutOfStock );
         if ( qty > min )
@@ -39,13 +38,15 @@ export default function ItemCounter( { min, stock } ) {
     };
 
     return (
-        <Box sx={{ bgcolor: g_Styles.colors.bg_c }}>
-            <ButtonGroup variant="outlined" aria-label="outlined button group" disabled={ isOutOfStock }>
+        <Box sx={{ display: 'flex', alignItems: 'center', bgcolor: g_Styles.colors.bg_c }}>
+            <ButtonGroup size='small' variant="outlined" aria-label="outlined button group" disabled={ isOutOfStock }>
                 <Button onClick={ sub }>-</Button>
                 <Button onClick={ clr }>{ qty }</Button>
                 <Button onClick={ add }>+</Button>
             </ButtonGroup>
-            <Button disabled={ isOutOfStock } onClick={ onAdd }>{ isOutOfStock ? msg.outOfStock : msg.addToCart }</Button>
+            <Button size='small' disabled={ isOutOfStock } onClick={ onAdd }>
+                { isOutOfStock ? msg.outOfStock : msg.addToCart }
+            </Button>
         </Box>
     );
 };

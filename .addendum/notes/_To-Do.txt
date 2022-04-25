@@ -1,3 +1,4 @@
+! Check for WIPs
 ! Add SEO
 ! Add Description
 ! Fonts
@@ -51,4 +52,17 @@
 ! [strings, messages] Revisar q las strings sean coerentes, en vez de q digan algo como item o producto q hagan referencia a los correctos servicios.
 
 
-! Check for WIPs
+! [styling, styles] Definir bien cuando uso sx, CSS, modulo CSS o etc ya q cuando se trata de componentes de MUI suelo usar inline sx.
+
+
+! Hacer el paso a React 18
+    Lo muestran en el After 05 - 1°00'55
+    import { createRoot } from 'react-dom/client';
+
+    createRoot( document.getElementById( 'root' ) ).render(
+        <React.StrictMode>
+            <App />
+        </React.StrictMode>
+    );
++
+
