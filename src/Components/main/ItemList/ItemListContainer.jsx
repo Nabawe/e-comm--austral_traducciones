@@ -11,7 +11,7 @@ export default function ItemListContainer() {
     const [ finishedLoading,    setFinishedLoading ]    = useState( false );
 
     useEffect( () => {
-        f_fetchPacks( 50, Packs, 0, 20 ) /* Cambiar a 2000ms */
+        f_fetchPacks( 2000, Packs, 0, 20 ) /* Cambiar a 2000ms */
             .then( result => {
                 setData( result );
                 setFinishedLoading( true );

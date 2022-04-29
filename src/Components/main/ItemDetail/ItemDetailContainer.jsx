@@ -9,7 +9,7 @@ export default function ItemDetailContainer() {
     const [ data, setData ] = useState( [] );
 
     useEffect( () => {
-        f_fetchPacks( 50, Packs, 1, 2 ) /* Cambiar a 2000 */
+        f_fetchPacks( 2000, Packs, 1, 2 ) /* Cambiar a 2000 */
             .then( result => { setData( result ) } )
             .catch( error => { console.log( "Error: ", error ) } );
     // },  [ data ] );
