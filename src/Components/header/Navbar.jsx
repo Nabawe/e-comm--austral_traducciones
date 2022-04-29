@@ -17,7 +17,7 @@ import logo_small_menu from "../../img/logo-small-menu.png";
 import CartWidged from './CartWidged';
 
 
-const pages = ['Contacto', 'Interpretación', 'Traducción'];
+const pages = [ 'Contacto', 'Interpretación', 'Traducción', 'Doblaje' ];
 
 export default function Navbar() {
     const [anchorElNav, setAnchorElNav] = useState( null );

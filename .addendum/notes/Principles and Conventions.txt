@@ -19,6 +19,17 @@
     o_Object
     c_Class
     e_HTMLElement           Need to define if only proper DOM elements or strings to insert as HTML.
+    Array?                  Array or a_Array need to define
+    Modulos                 .mjs or .module.js or similar. Pero para el nombre en si del modulo?
+
+    Definir si aplicar este tipo de nomenglatura solo a nivel global, ya q por ejemplo dentro de una función queda más proliojo usar :
+        nombreVariable
+        NombreObjeto
+    Pero para funciones y clases queda bien el f_ y c_
+
+    Para CONSTANTES globales NOMBRE_CONSTANTE
+
+    https://www.robinwieruch.de/javascript-naming-conventions/
 +
 
 

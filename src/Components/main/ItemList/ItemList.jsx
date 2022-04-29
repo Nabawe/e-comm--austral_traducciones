@@ -10,7 +10,7 @@ export default function ItemList( { packs } ) {
             sx={{ width: '99%' }}
         >
             {
-                packs.map( p => ( <Item key={ p.id } i={ p } /> ) )
+                packs.map( p => ( <Item key={ p.id } itm={ p } /> ) )
             }
         </Stack>
     );

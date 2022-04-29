@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import g_Styles from "../../style/g_Styles.js";
-import msg from './ItemCounter.msg.js'
+import msg from './ItemCounter.msg.js';
 
 
 export default function ItemCounter( { min, stock } ) {
@@ -38,7 +38,7 @@ export default function ItemCounter( { min, stock } ) {
     };
 
     return (
-        <Box sx={{ display: 'flex', alignItems: 'center', bgcolor: g_Styles.colors.bg_c }}>
+        <Box sx={{ width: 'fit-content', display: 'flex', alignItems: 'center', bgcolor: g_Styles.colors.bg_c }}>
             <ButtonGroup size='small' variant="outlined" aria-label="outlined button group" disabled={ isOutOfStock }>
                 <Button onClick={ sub }>-</Button>
                 <Button onClick={ clr }>{ qty }</Button>

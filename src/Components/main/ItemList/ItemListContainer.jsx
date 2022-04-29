@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
-import f_fetchPacks from '../../../fetch/f_fetchPacks.js';
-import packs from '../../../data/packs_500.json';
+import f_fetchPacks from '../../../utils/f_fetchPacks.js';
+import Packs from '../../../data/Packs_500.json';
 import ItemList from './ItemList.jsx';
 
 
@@ -11,7 +11,7 @@ export default function ItemListContainer() {
     const [ finishedLoading,    setFinishedLoading ]    = useState( false );
 
     useEffect( () => {
-        f_fetchPacks( 50, packs ) /* Cambiar a 2000 */
+        f_fetchPacks( 50, Packs, 0, 20 ) /* Cambiar a 2000ms */
             .then( result => {
                 setData( result );
                 setFinishedLoading( true );
@@ -20,23 +20,27 @@ export default function ItemListContainer() {
             .catch( error => {
                 console.log( "Error: ", error );
                 setFetchWitness( false );
-            } )
-            .finally( () => {
+            } );
+            // .finally( () => {
                 /* Si la data no fue recibida y no hubo error como actual?
                 Mostrar data vieja? Mostrar Esqueleto?
                 Asumir q hubo error?*/
-            });
-    },  [ data ] );
+            // });
+    // },  [ data ] );
+    /*
+        Esto haria q el useEffect se dispare como undefined ya q la promesa se tiene q resolver para setear data, aunque si no entiendo mal tendria q ser [[]] ya q data inicia como un array vacio y por ende no undefined...
+    */
+    },  [] );
 
 
     return (
         /* Hay forma de usar 1 sola variable y hacer algo tipo un case o if o else if o usar un array con las distintas condiciones ya q creo q deja mucho espacio a error esta forma */
         ( fetchWitness ) ?
             ( finishedLoading ) ?
-                <ItemList packs={ data.slice( 0, 20 ) }/>
+                <ItemList packs={ data }/>
             :
-                <p> Agregar Loading Bar or Spinner ...</p>
+                <p> Agregar Loading Bar or Spinner ... </p>
         :
-            <p> Display ErrorLoadingPacks Component</p>
+            <p> Display ErrorLoadingPacks Component </p>
     );
 };

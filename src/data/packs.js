@@ -1,4 +1,4 @@
-const packs = [
+const Packs = [
     {
         id:             1,
         name:           "Traducción general o técnica (inglés > español)",
@@ -71,4 +71,4 @@ const packs = [
     },
 ];
 
-export default packs;
+export default Packs;

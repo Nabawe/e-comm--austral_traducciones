@@ -3,36 +3,51 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import * as MUIColors from '@mui/material/colors';
 
 import ItemCounter from './ItemCounter.jsx';
+import CategoriesColors from '../../data/CategoriesColors.js';
 
+// export default function Item( { id, name, price, currency, priceUnit, cat, stock, min, pic, picAlt, desc_short, desc_long } ) {
+export default function Item( { itm } ) {
 
-// export default function Item( { id, name, price, currency, priceUnit, cat, stock, min, pic, picAlt, desc_short } ) {
-// ! WIP - Me falta usar cat
-export default function Item( { i } ) {
     return (
-        <Card sx={{ display: 'flex' }}>
+        <Card sx={{ width: '100%', height: 151, display: 'flex', alignItems: 'center' }}>
             <CardMedia
                 component="img"
                 /* Originalmente eran 200 y 300 lo dividi a la mitad y agregue 1 de altura ya q sino quedaba un borde blanco debajo, y cambiar la alineacion o agregar margen era peor, creo q la unidad no son pixeles */
-                sx={{ width: 100, height: 151 }}
-                image={ i.pic }
-                alt={ i.picAlt }
+                sx={{ width: 100, height: '100%' }}
+                image={ itm.pic }
+                alt={ itm.picAlt }
             />
-            <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-                <CardContent sx={{ flex: '1 0 auto' }}>
-                    <Typography component="div" variant="h7">
-                        { i.name }
+            <Typography
+                component="div"
+                variant="overline"
+                /* ! WIP deberia ser sideways-lr */
+                sx={{
+                    height: '100%',
+                    textAlign: 'center',
+                    writingMode: 'vertical-lr',
+                    transform: 'rotate(-180deg)',
+                    bgcolor: MUIColors[ CategoriesColors.get( itm.cat ) ][200]
+                }}
+            >
+                { itm.cat }
+            </Typography>
+            <Box sx={{ display: 'flex', flexDirection: 'column', mt: '-15px', gap: '20px' }}> {/* Problemas de alineación */}
+                <CardContent sx={{ flex: '1 0 auto' }}> {/* Creo q el sx no afecta */}
+                    <Typography component="div" variant="h6">
+                        { itm.name }
                     </Typography>
                     <Typography variant="subtitle1" color="text.secondary" component="div">
-                        { i.desc_short }
+                        { itm.desc_short }
                     </Typography>
                     <Typography variant="subtitle2" color="text.secondary" component="div">
-                        ${ i.price }({ i.currency }) / { i.priceUnit}
+                        ${ itm.price }({ itm.currency }) / { itm.priceUnit}
                     </Typography>
                 </CardContent>
-                <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
-                    <ItemCounter min={ i.min } stock={ i.stock } />
+                <Box sx={{ pl: 1 }}>
+                    <ItemCounter min={ itm.min } stock={ itm.stock } />
                 </Box>
             </Box>
         </Card>
