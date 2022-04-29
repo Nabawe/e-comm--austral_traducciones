@@ -1,0 +1,38 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ItemCounter.jsx
+    Mover la logica a ItemCounterContainer u otro componente padre.
+
+
+Leer sobre setTimeout
+
+
+Decir q no borraste comentarios por las preguntas.
+
+- ‘/’ navega a <ItemListContainer />
+- ‘/category/:id’  <ItemListContainer />
+- ‘/item/:id’ navega a <ItemDetailContainer />
+- Item.js debe navegar a /item/:id
+- brand navega a ‘/’
+- categoría del navbar navegar a /category/:categoryId ( hacer q sea clickeando en cualquier parte q tenga una cat )
+
+- Para finalizar integra los parámetros de tus async-mocks para reaccionar a :itemId y :categoryId ¡utilizando efectos y los hooks de parámetros que vimos en clase!
+- Si te encuentras en una categoría deberías poder detectar la navegación a otra categoría y volver a cargar los productos que correspondan a dicha categoría
+
