@@ -17,8 +17,9 @@ import CartWidged from './CartWidged';
 import Categories from '../../data/Categories.js'
 import g_Styles from "../../style/g_Styles.js";
 import logo_small_menu from "../../img/logo-small-menu.png";
+import Pages from '../../data/Pages.js'
 
-const pages = [ 'Contacto', ...Categories.keys() ];
+const pages = Object.keys( Pages );
 
 export default function Navbar() {
     const [anchorElNav, setAnchorElNav] = useState( null );
@@ -80,7 +81,7 @@ export default function Navbar() {
                         >
                             {pages.map( ( page ) => (
                                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Link to={ '/category/' + page }>
+                                    <Link to={ Pages[page].route }>
                                         <Typography textAlign="center">{page}</Typography>
                                     </Link>
                                 </MenuItem>

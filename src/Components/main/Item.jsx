@@ -29,7 +29,7 @@ export default function Item( { itm } ) {
                     textAlign: 'center',
                     writingMode: 'vertical-lr',
                     transform: 'rotate(-180deg)',
-                    bgcolor: MUIColors[ Categories[ itm.cat ].color ][200]
+                    bgcolor: MUIColors[Categories[itm.cat].color][200]
                 }}
             >
                 { itm.cat }

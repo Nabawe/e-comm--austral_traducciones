@@ -1,10 +1,11 @@
-// import Categories from './Categories.js'
-const Categories = {
-    'Interpretación':     { color:   'indigo',    route:'/category/interpretation' },
-    'Traducción':         { color:   'teal',      route:'/category/translation' },
-    'Doblaje':            { color:   'yellow',    route:'/category/dub' }
-};
+import Categories from './Categories.js'
+// const Categories = {
+//     'Interpretación':     { color:   'indigo',    route:'/category/interpretation' },
+//     'Traducción':         { color:   'teal',      route:'/category/translation' },
+//     'Doblaje':            { color:   'yellow',    route:'/category/dub' }
+// };
 
+/*
 const keys = Object.keys( Categories );
 // const routes = { ...Object.keys( Categories ).route }
 console.log( keys );
@@ -20,11 +21,20 @@ const Pages = [
     { name: 'Contacto', route: '/contact' },
     ...Cats
 ];
+ */
+
+const Pages = {
+    'Contacto':           { route: '/contact' },
+    ...Categories
+};
+
     // category...Object.keys( Categories )
     // [ 'doblaje',             'yellow' ],
     // [ 'interpretación',      'indigo' ],
     // [ 'traducción',          'teal' ]
 
-// export default Pages;
+export default Pages;
 
-console.log( Pages );
+// console.log( Pages );
+
+// console.log( Pages['Traducción'].route );
