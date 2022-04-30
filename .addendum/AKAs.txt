@@ -1,6 +1,7 @@
 + Components
 + Events
 + Functions
++ Routes
 
 
     CoderHouse                          Yo
@@ -19,11 +20,14 @@
 
 
 + Events
++
+
+
++ Functions
+    getItem                             se usa f_fetchPacks con otros parametros
     onAdd                               onAdd
 +
 
 
-
-+ Functions
-    getItem                             getItem
++ Routes
 +

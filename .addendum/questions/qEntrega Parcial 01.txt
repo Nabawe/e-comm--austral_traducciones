@@ -24,6 +24,8 @@ ItemCounter.jsx
 Leer sobre setTimeout
 
 
+Evaluar si usar https://mui.com/material-ui/react-link/
+
 Decir q no borraste comentarios por las preguntas.
 
 - ‘/’ navega a <ItemListContainer />

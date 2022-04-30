@@ -55,6 +55,15 @@
 ! [styling, styles] Definir bien cuando uso sx, CSS, modulo CSS o etc ya q cuando se trata de componentes de MUI suelo usar inline sx.
 
 
+
+
+
+
+
+
+
+
+
 ! Hacer el paso a React 18
     Lo muestran en el After 05 - 1°00'55
     import { createRoot } from 'react-dom/client';
@@ -65,4 +74,3 @@
         </React.StrictMode>
     );
 +
-

@@ -9,9 +9,7 @@ export default function ItemList( { packs } ) {
             spacing={{ xs: 1, sm: 2, md: 4 }}
             sx={{ width: '99%' }}
         >
-            {
-                packs.map( p => ( <Item key={ p.id } itm={ p } /> ) )
-            }
+            { packs.map( p => ( <Item key={ p.id } itm={ p } /> ) ) }
         </Stack>
     );
 };

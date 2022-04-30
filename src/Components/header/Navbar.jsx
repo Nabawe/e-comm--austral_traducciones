@@ -1,23 +1,24 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 // MUI Imports
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
+import Button from '@mui/material/Button';
+import Container from '@mui/material/Container';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
 // Custom Imports
-import g_Styles from "../../style/g_Styles.js";
 import css from "./Navbar.module.css";
-import logo_small_menu from "../../img/logo-small-menu.png";
 import CartWidged from './CartWidged';
+import Categories from '../../data/Categories.js'
+import g_Styles from "../../style/g_Styles.js";
+import logo_small_menu from "../../img/logo-small-menu.png";
 
-
-const pages = [ 'Contacto', 'Interpretación', 'Traducción', 'Doblaje' ];
+const pages = [ 'Contacto', ...Categories.keys() ];
 
 export default function Navbar() {
     const [anchorElNav, setAnchorElNav] = useState( null );
@@ -79,7 +80,9 @@ export default function Navbar() {
                         >
                             {pages.map( ( page ) => (
                                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">{page}</Typography>
+                                    <Link to={ '/category/' + page }>
+                                        <Typography textAlign="center">{page}</Typography>
+                                    </Link>
                                 </MenuItem>
                             ) )}
                         </Menu>
