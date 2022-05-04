@@ -4,8 +4,88 @@
 			"path": "src/Components/header/Navbar.jsx",
 			"bookmarks": [
 				{
-					"line": 82,
+					"line": 81,
 					"column": 82,
+					"label": ""
+				},
+				{
+					"line": 109,
+					"column": 85,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "src/App.js",
+			"bookmarks": [
+				{
+					"line": 7,
+					"column": 83,
+					"label": ""
+				},
+				{
+					"line": 22,
+					"column": 34,
+					"label": ""
+				},
+				{
+					"line": 24,
+					"column": 90,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "src/Components/main/ItemList/ItemListContainer.jsx",
+			"bookmarks": [
+				{
+					"line": 14,
+					"column": 30,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "src/utils/f_fetchItem.js",
+			"bookmarks": [
+				{
+					"line": 14,
+					"column": 52,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "src/utils/f_fetchPacks.js",
+			"bookmarks": [
+				{
+					"line": 15,
+					"column": 56,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "src/Components/main/ItemDetail/ItemDetailContainer.jsx",
+			"bookmarks": [
+				{
+					"line": 11,
+					"column": 77,
+					"label": ""
+				},
+				{
+					"line": 21,
+					"column": 48,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "src/Components/main/Item.jsx",
+			"bookmarks": [
+				{
+					"line": 51,
+					"column": 43,
 					"label": ""
 				}
 			]

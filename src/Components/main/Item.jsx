@@ -5,8 +5,9 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import * as MUIColors from '@mui/material/colors';
 
-import ItemCounter from './ItemCounter.jsx';
 import Categories from '../../data/Categories.js';
+import ItemCounter from './ItemCounter.jsx';
+import ItemDetailContainer from './ItemDetail/ItemDetailContainer.jsx';
 
 // export default function Item( { id, name, price, currency, priceUnit, cat, stock, min, pic, picAlt, desc_short, desc_long } ) {
 export default function Item( { itm } ) {
@@ -32,7 +33,7 @@ export default function Item( { itm } ) {
                     bgcolor: MUIColors[Categories[itm.cat].color][200]
                 }}
             >
-                { itm.cat }
+                { Categories[itm.cat].label }
             </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'column', mt: '-15px', gap: '20px' }}> {/* Problemas de alineación */}
                 <CardContent sx={{ flex: '1 0 auto' }}> {/* Creo q el sx no afecta */}
@@ -46,8 +47,9 @@ export default function Item( { itm } ) {
                         ${ itm.price }({ itm.currency }) / { itm.priceUnit}
                     </Typography>
                 </CardContent>
-                <Box sx={{ pl: 1 }}>
+                <Box sx={{ display: 'flex', pl: 1 }}>
                     <ItemCounter min={ itm.min } stock={ itm.stock } />
+                    <ItemDetailContainer itm={ itm } /> {/* Aqui iria un link q dispara el componente correcto usando rutas o algo así */}
                 </Box>
             </Box>
         </Card>

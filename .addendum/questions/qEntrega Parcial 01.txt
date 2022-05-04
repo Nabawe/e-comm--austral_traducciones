@@ -1,3 +1,5 @@
++ Necesidad de JSON Parse?
++ Doc Strings
 
 
 
@@ -10,11 +12,18 @@
 
 
 
+!! la razon de no pasar el item completo a ItemList es para no pasar info no usada, como desc_long
+    Pero con este nivel de info tal vez es peor generar 2 fetch si se puede bajar una cantidad acotada de items por pagina para q realizar multiples fetchs. O sea 20 resultados. O bajar el triple de resultados a mostrar, 20 pasados, 20 precentes y 20 para next.
+        Hacerlo asi para la entrega esta y modificarlo para la final
 
 
+Ver como utilizar los Links de MUI y emprolijar en Navbar.jsx y finalmente combertir el logo en un link.
 
+Colocar Item Details en las cards
 
-
+Make
+    ErrorLoadingPacks.jsx
+    Contact.jsx
 
 
 ItemCounter.jsx
@@ -23,8 +32,6 @@ ItemCounter.jsx
 
 Leer sobre setTimeout
 
-
-Evaluar si usar https://mui.com/material-ui/react-link/
 
 Decir q no borraste comentarios por las preguntas.
 
@@ -38,3 +45,20 @@ Decir q no borraste comentarios por las preguntas.
 - Para finalizar integra los parámetros de tus async-mocks para reaccionar a :itemId y :categoryId ¡utilizando efectos y los hooks de parámetros que vimos en clase!
 - Si te encuentras en una categoría deberías poder detectar la navegación a otra categoría y volver a cargar los productos que correspondan a dicha categoría
 
+
++ Necesidad de JSON Parse?
+    Desde las entregas anteriores cuando accedo al archivo Packs_500.json en f_fetchPacks no necesito usar JSON Parse antes de utilizarlo, si hago un console.log( data ); dentro de el resultado positivo me devuelve Array, debería usar JSON Parse igual?, o solo si en mi data va a haber valores especiales como Objetos? Criterios aparte del tipo de datos?
+    Puede ser q cuando hago el import en el modulo se realize alguna conversión? de ser así q riesgos hay?
+
+    Si lo intento usar me tira el siguiente error :
+        "VM1675:1 Uncaught SyntaxError: Unexpected token o in JSON at position 1
+        at JSON.parse (<anonymous>)
+        at f_fetchPacks.js:14:1"
++
+
+
++ Doc Strings
+    Como debería marcar correctamente los argumentos Opcionales? Y el Return?
+    ejemplo en f_fetchItem VS Code me marca un ? en los opcionales pero no es muy claro y no me muestra el tipo de dato del return.
+    Una buena guia para docstrings? tipo una cheat sheet y o alguna extención recomendada? aunque si tengo el cursor sobre el nombre de la funcion y typeo /** VS Code me auto completa bastante. Raro q no haya alguna keybind para no depender del Mouse.
++

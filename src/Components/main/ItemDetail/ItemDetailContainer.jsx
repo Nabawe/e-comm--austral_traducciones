@@ -1,15 +1,15 @@
 import { useState, useEffect } from 'react';
 
-import f_fetchPacks from '../../../utils/f_fetchPacks.js';
+import f_fetchItem from '../../../utils/f_fetchItem.js';
 import Packs from '../../../data/Packs_500.json';
 import ItemDetailPopper from './ItemDetailPopper.jsx';
 
 
-export default function ItemDetailContainer() {
+export default function ItemDetailContainer( { itm } ) {
     const [ data, setData ] = useState( [] );
 
     useEffect( () => {
-        f_fetchPacks( 500, Packs, 1, 2 ) /* Cambiar a 2000 */
+        f_fetchItem( 500, Packs, '9b2b1f8a-023c-4740-9e0e-859acda15c6b' ) /* Cambiar a 2000 */
             .then( result => { setData( result ) } )
             .catch( error => { console.log( "Error: ", error ) } );
     // },  [ data ] );
@@ -19,6 +19,7 @@ export default function ItemDetailContainer() {
     },  [] );
 
     return (
-            <ItemDetailPopper itm={ data[0] } />
+            // <ItemDetailPopper itm={ data } />
+            <ItemDetailPopper itm={ itm } />
     );
 };

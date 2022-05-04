@@ -20,13 +20,14 @@ export default function App() {
                     <Navbar />
                 </header>
 
-                <Routes>
-                    {/* <main> */}
+                <main>
+                    <Routes>
                         <Route path='/item/:itemId' element={ <ItemDetailContainer /> } />
                         <Route path='/' element={ <ItemListContainer /> } />
+                        <Route path='/contact' element={ <p> Make Contact !!! </p> } />
                         <Route path='/category/:categoryId' element={ <ItemListContainer /> } />
-                    {/* </main> */}
-                </Routes>
+                    </Routes>
+                </main>
 
                 <footer>
 

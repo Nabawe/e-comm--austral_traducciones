@@ -14,12 +14,11 @@ import Typography from '@mui/material/Typography';
 // Custom Imports
 import css from "./Navbar.module.css";
 import CartWidged from './CartWidged';
-import Categories from '../../data/Categories.js'
 import g_Styles from "../../style/g_Styles.js";
 import logo_small_menu from "../../img/logo-small-menu.png";
-import Pages from '../../data/Pages.js'
+import Paths from '../../data/Paths.js'
 
-const pages = Object.keys( Pages );
+const pages = Object.keys( Paths );
 
 export default function Navbar() {
     const [anchorElNav, setAnchorElNav] = useState( null );
@@ -81,8 +80,8 @@ export default function Navbar() {
                         >
                             {pages.map( ( page ) => (
                                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Link to={ Pages[page].route }>
-                                        <Typography textAlign="center">{page}</Typography>
+                                    <Link to={ Paths[page].route }>
+                                        <Typography textAlign="center">{Paths[page].label}</Typography>
                                     </Link>
                                 </MenuItem>
                             ) )}
@@ -107,7 +106,9 @@ export default function Navbar() {
                                 onClick={handleCloseNavMenu}
                                 sx={{ my: 2, color: 'white', display: 'block' }}
                             >
-                                {page}
+                                <Link to={ Paths[page].route }>
+                                    <Typography textAlign="center">{Paths[page].label}</Typography>
+                                </Link>
                             </Button>
                         ) )}
                     </Box>

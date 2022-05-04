@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
 import f_fetchPacks from '../../../utils/f_fetchPacks.js';
 import Packs from '../../../data/Packs_500.json';
@@ -9,11 +10,15 @@ export default function ItemListContainer() {
     const [ data,               setData ]               = useState( [] );
     const [ fetchWitness,       setFetchWitness ]       = useState( true );
     const [ finishedLoading,    setFinishedLoading ]    = useState( false );
+    const { categoryId } = useParams();
+
+    console.log( categoryId );
 
     useEffect( () => {
-        f_fetchPacks( 500, Packs, 0, 20 ) /* Cambiar a 2000ms */
+        f_fetchPacks( 500, Packs, 0, 20, categoryId ) /* Cambiar a 2000ms */
             .then( result => {
                 setData( result );
+                console.log( result );
                 setFinishedLoading( true );
                 setFetchWitness( true ); /* Esta Linea es necesaria? */
             } )
@@ -30,7 +35,7 @@ export default function ItemListContainer() {
     /*
         Esto haria q el useEffect se dispare como undefined ya q la promesa se tiene q resolver para setear data, aunque si no entiendo mal tendria q ser [[]] ya q data inicia como un array vacio y por ende no undefined...
     */
-    },  [] );
+    },  [categoryId] );
 
 
     return (
@@ -39,7 +44,7 @@ export default function ItemListContainer() {
             ( finishedLoading ) ?
                 <ItemList packs={ data }/>
             :
-                <p> Agregar Loading Bar or Spinner ... </p>
+                <p> Agregar Loading Bar or Spinner or Skeleton ... </p>
         :
             <p> Display ErrorLoadingPacks Component </p>
     );

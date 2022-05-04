@@ -31,7 +31,7 @@ export default function ItemDetail( { itm } ) {
                     bgcolor: MUIColors[Categories[itm.cat].color][200]
                 }}
             >
-                { itm.cat }
+                { Categories[itm.cat].label }
             </Typography>
             {/* WIP Deberia ser justifyContent: 'space-between' */}
             <Box sx={{ display: 'flex', flexDirection: 'column', rowGap: 7 }}>
