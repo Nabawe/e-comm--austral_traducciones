@@ -50,6 +50,9 @@
 +
 
 
++ De usar promises o algun tipo de fetch, arreglar para q los errores usen un mecanismo comun
+
+
 ! [strings, messages] Revisar q las strings sean coerentes, en vez de q digan algo como item o producto q hagan referencia a los correctos servicios.
 
 

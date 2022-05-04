@@ -11,14 +11,20 @@ export default function f_fetchPacks( delay, data, ini, end, categoryFilter ) {
     return new Promise( ( resolve, reject ) => {
         setTimeout( () => {
             if ( MockResult ) {
-                categoryFilter ?
-                    resolve( data.filter( elem => elem.cat === categoryFilter ).slice( ini, end ) )
-                    // agregar si no encuentra resultado
-                :
-                    resolve( data.slice( ini, end ) )
-                ;
+                if ( categoryFilter ) {
+                    let output = data.filter( elem => elem.cat === categoryFilter );
+                    if ( output.length !== 0 ) {
+                        output = output.slice( ini, end );
+                        ( output.length !== 0 ) ? resolve( output ) : reject( 'Out_of_Scope' );
+                    } else {
+                        reject( 'No_Match' );
+                    };
+                } else {
+                    let output = data.slice( ini, end );
+                    ( output.length !== 0 ) ? resolve( output ) : reject( 'Out_of_Scope' );
+                };
             } else {
-                reject( "Failed" );
+                reject( 'Fetch_Failed' );
             };
         },  delay );
     } );

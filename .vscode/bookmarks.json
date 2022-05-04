@@ -46,26 +46,6 @@
 			]
 		},
 		{
-			"path": "src/utils/f_fetchItem.js",
-			"bookmarks": [
-				{
-					"line": 14,
-					"column": 52,
-					"label": ""
-				}
-			]
-		},
-		{
-			"path": "src/utils/f_fetchPacks.js",
-			"bookmarks": [
-				{
-					"line": 15,
-					"column": 56,
-					"label": ""
-				}
-			]
-		},
-		{
 			"path": "src/Components/main/ItemDetail/ItemDetailContainer.jsx",
 			"bookmarks": [
 				{

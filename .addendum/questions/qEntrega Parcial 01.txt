@@ -13,9 +13,14 @@
 
 
 !! la razon de no pasar el item completo a ItemList es para no pasar info no usada, como desc_long
-    Pero con este nivel de info tal vez es peor generar 2 fetch si se puede bajar una cantidad acotada de items por pagina para q realizar multiples fetchs. O sea 20 resultados. O bajar el triple de resultados a mostrar, 20 pasados, 20 precentes y 20 para next.
+    Pero con este nivel de info tal vez es peor generar 2 fetch si se puede bajar una cantidad acotada de items por pagina para q realizar multiples fetchs. O sea 20 resultados. O bajar el triple de resultados a mostrar, 20 pasados, 20 precentes y 20 para next. Ademas supuestamente solo se pasan referencias.
         Hacerlo asi para la entrega esta y modificarlo para la final
 
+! Conciderar sacar poper e itemdetail y armar componente ItemPage
+
+Al mostrar un solo item q el popper sea mas grande y proporcioan y se ajuste al centro de la pantalla.
+
+Conciderar si al mostrar un solo item tambien se ajusta la url a la categoria correspondiente.
 
 Ver como utilizar los Links de MUI y emprolijar en Navbar.jsx y finalmente combertir el logo en un link.
 

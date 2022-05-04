@@ -11,10 +11,15 @@ export default function f_fetchItem( delay, data, id, ini, end ) {
     return new Promise( ( resolve, reject ) => {
         setTimeout( () => {
             if ( MockResult ) {
-                resolve( data.slice( ini, end ).find( elem => elem.id === id ) );
-                // agregar si no encuentra resultado
+                let output = data.slice( ini, end );
+                if ( output.length !== 0 ) {
+                    output = output.find( elem => elem.id === id );
+                    ( output ) ? resolve( output ) : reject( 'No_Match' );
+                } else {
+                    reject( 'Out_of_Scope' );
+                };
             } else {
-                reject( "Failed" );
+                reject( 'Fetch_Failed' );
             };
         },  delay );
     } );
