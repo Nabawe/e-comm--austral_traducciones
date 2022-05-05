@@ -11,7 +11,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MUILink from '@mui/material/Link'
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
+// import Typography from '@mui/material/Typography';
 // Custom Imports
 import css from "./Navbar.module.css";
 import CartWidged from './CartWidged';
@@ -39,17 +39,13 @@ export default function Navbar() {
         >
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <Typography
+                    <MUILink
                         component={ Link }
                         to={ '/' }
-                        variant="h6"
-                        noWrap
                         sx={{ textDecoration: 'none', mr: 2, display: { xs: 'none', md: 'flex' } }}
                     >
-                        {/* WIP Modificar esto por Button, Link, IconButton o lo q sea correcto, talvez sea necesario q la clase en mobile sea tratada distinta y en vez de especificar el tamaño de la imagen q el contenedor se ajuste al tamaño de la nav y la imagen al tamaño de su contenedor */}
-                            {/* Ya me contesto esto pero necesito entender más antes de cambiarlo */}
                         <img className={ css.p_nav__logo } src={ logo_small_menu } alt="Logo" />
-                    </Typography>
+                    </MUILink>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
@@ -82,42 +78,6 @@ export default function Navbar() {
                         >
                             {pages.map( ( page ) => (
                                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">
-                                        <MUILink
-                                            component={ Link }
-                                            to={ Paths[page].route }
-                                            textAlign="center"
-                                            color='inherit'
-                                            sx={{ textDecoration: 'none' }}
-                                        >
-                                            {Paths[page].label}
-                                        </MUILink>
-                                    </Typography>
-                                </MenuItem>
-                            ) )}
-                        </Menu>
-                    </Box>
-
-                    <Typography
-                        // component={ Link }
-                        // to={ '/' }
-                        variant="h6"
-                        noWrap
-                        sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
-                    >
-                        {/* WIP Modificar esto por Button, Link, IconButton o lo q sea correcto, talvez sea necesario q la clase en mobile sea tratada distinta y en vez de especificar el tamaño de la imagen q el contenedor se ajuste al tamaño de la nav y la imagen al tamaño de su contenedor */}
-                                {/* Ya me contesto esto pero necesito entender más antes de cambiarlo */}
-                        <img className={ css.p_nav__logo__mobile } src={ logo_small_menu } alt="Logo" />
-                    </Typography>
-
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                        {pages.map( ( page ) => (
-                            <Button
-                                key={page}
-                                onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'white', display: 'block' }}
-                            >
-                                <Typography textAlign="center">
                                     <MUILink
                                         component={ Link }
                                         to={ Paths[page].route }
@@ -127,7 +87,35 @@ export default function Navbar() {
                                     >
                                         {Paths[page].label}
                                     </MUILink>
-                                </Typography>
+                                </MenuItem>
+                            ) )}
+                        </Menu>
+                    </Box>
+
+                    <MUILink
+                        component={ Link }
+                        to={ '/' }
+                        sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
+                    >
+                        <img className={ css.p_nav__logo__mobile } src={ logo_small_menu } alt="Logo" />
+                    </MUILink>
+
+                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                        {pages.map( ( page ) => (
+                            <Button
+                                key={page}
+                                onClick={handleCloseNavMenu}
+                                sx={{ my: 2, color: 'white', display: 'block' }}
+                            >
+                                <MUILink
+                                    component={ Link }
+                                    to={ Paths[page].route }
+                                    textAlign="center"
+                                    color='inherit'
+                                    sx={{ textDecoration: 'none' }}
+                                >
+                                    {Paths[page].label}
+                                </MUILink>
                             </Button>
                         ) )}
                     </Box>

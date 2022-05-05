@@ -1,21 +1,6 @@
 {
 	"files": [
 		{
-			"path": "src/Components/header/Navbar.jsx",
-			"bookmarks": [
-				{
-					"line": 50,
-					"column": 96,
-					"label": ""
-				},
-				{
-					"line": 109,
-					"column": 91,
-					"label": ""
-				}
-			]
-		},
-		{
 			"path": "src/App.js",
 			"bookmarks": [
 				{
@@ -64,7 +49,7 @@
 			"path": "src/Components/main/Item.jsx",
 			"bookmarks": [
 				{
-					"line": 61,
+					"line": 65,
 					"column": 43,
 					"label": ""
 				}

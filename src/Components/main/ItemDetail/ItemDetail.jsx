@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom';
+
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -11,6 +13,12 @@ import Categories from '../../../data/Categories.js';
 
 // export default function Item( { id, name, price, currency, priceUnit, cat, stock, min, pic, picAlt, desc_short, desc_long } ) {
 export default function ItemDetail( { itm } ) {
+    let navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate( Categories[itm.cat].route );
+    };
+
     return (
         <Card sx={{ display: 'flex', width: 1000, height: 300, alignItems: 'center' }}>
             <CardMedia
@@ -22,6 +30,7 @@ export default function ItemDetail( { itm } ) {
             <Typography
                 component="div"
                 variant="overline"
+                onClick={ handleClick }
                 /* ! WIP deberia ser sideways-lr */
                 sx={{
                     height: '100%',
@@ -29,7 +38,8 @@ export default function ItemDetail( { itm } ) {
                     writingMode: 'vertical-lr',
                     transform: 'rotate(-180deg)',
                     color: MUIColors.common.white,
-                    bgcolor: MUIColors[Categories[itm.cat].color][200]
+                    bgcolor: MUIColors[Categories[itm.cat].color][200],
+                    cursor: 'pointer'
                 }}
             >
                 { Categories[itm.cat].label }

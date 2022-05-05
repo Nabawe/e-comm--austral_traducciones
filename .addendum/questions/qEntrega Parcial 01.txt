@@ -2,21 +2,16 @@
 + Doc Strings
 + useNavigate
 + Sobre declarar DONDE const, vars, etc
++ Cuando otros componentes se disfrazan de Link
 
 
 
 
-
-
+- Pasar las rutas a relativas, anidadas y defaults (index)
+    Hacer esto y arreglar el tema q al seleccionar item detail se borra el filtro de category
 
 
 va a funcionar mas o menos como lo plantie y usaria el fetchItem solo cuando se coloca el id manualmente en la URL
-
->>>>>>>>>>>> Lo primero a hacer es ver como utilizar links y o botones o links con el estilo de un boton, esta tambien el mecanismo useNavigation q seguramente se podria disparar desde un boton.
-
->>>>>>>> hacer el boton de home, investigar sobre los icons
-
-- Pasar las rutas a relativas
 
 
 !! la razon de no pasar el item completo a ItemList es para no pasar info no usada, como desc_long
@@ -51,6 +46,18 @@ Leer sobre setTimeout
 
 
 Decir q no borraste comentarios por las preguntas.
+Comentar sobre la decicion de usar Popper y cuando usar el Find
+
+Escribir en los principios sobre esto:
+    usar import Image from 'mui-image' para las imagenes de los items, testear q sea como deceo.
+        Parece haber al menos 7 casos:
+            Box component='img'
+            Avatar
+            CardMedia
+            mui-image
+            Icon
+            img tag
+            icons and svg icons
 
 - ‘/’ navega a <ItemListContainer />
 - ‘/category/:id’  <ItemListContainer />
@@ -83,6 +90,14 @@ Decir q no borraste comentarios por las preguntas.
 
 + useNavigate
     En la doc de React DOM declaran usando let navigate, porque no usar const?.
+
+    Usado en Item.jsx e ItemDetail.jsx
+
+    Q seria mejor hacer uso del hook o usar el MUILink con component Link (react DOM) como hice en Navbar.jsx?
+
+    No se q es más pesado, agil o correcto.
+
+    Al usar el hook me permite usar Typography tranquilamente, pero supuestamente MUILink esta basado en Typography y hacer asi seria mas 'semanticamente correcto' (usando link) aunque en realidad esta siendo usado como un boton de filtro... usar boton disfrazado de typography?
 +
 
 
@@ -93,4 +108,12 @@ Decir q no borraste comentarios por las preguntas.
     3 - en el return o render
 
     Tengo mis nociones pero quiciera saberlo con mayor exactitud, sino un link a la doc apropiada. En especial la diferencia entre 1 y 2
++
+
+
++ Cuando otros componentes se disfrazan de Link
+    Tube q leer largosobre esto y aun no tengo una conclusión satisfactoría, si no entiendo mal lo más correcto es usar algun componente q este realmente definido como Link y a este stilizarlo para q se parezca a lo q quiero q se paresca y agregarle la funcionalidad usando la prop component y o un intermediario y la prop component.
+    Esto mayoriatariamente parece ser por temas de Accesibilidad y CEO, pero me pasa q en realidad yo quiero q la base sea el otro componente y q este tome la funcionalidad de los Links ya q no es solo como se ve sino como se siente ( hover, efectos, etc ).
+
+    Cual seria la forma correcta de proceder?
 +
