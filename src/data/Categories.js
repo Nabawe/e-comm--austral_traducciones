@@ -11,7 +11,7 @@ const Categories = {
     },
     dub: {
         label: 'Doblaje',
-        color: 'yellow',
+        color: 'lightBlue',
         route: '/category/dub'
     }
 };

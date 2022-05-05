@@ -9,6 +9,7 @@ import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import MUILink from '@mui/material/Link'
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 // Custom Imports
@@ -39,10 +40,11 @@ export default function Navbar() {
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Typography
+                        component={ Link }
+                        to={ '/' }
                         variant="h6"
                         noWrap
-                        component="div"
-                        sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
+                        sx={{ textDecoration: 'none', mr: 2, display: { xs: 'none', md: 'flex' } }}
                     >
                         {/* WIP Modificar esto por Button, Link, IconButton o lo q sea correcto, talvez sea necesario q la clase en mobile sea tratada distinta y en vez de especificar el tamaño de la imagen q el contenedor se ajuste al tamaño de la nav y la imagen al tamaño de su contenedor */}
                             {/* Ya me contesto esto pero necesito entender más antes de cambiarlo */}
@@ -80,18 +82,27 @@ export default function Navbar() {
                         >
                             {pages.map( ( page ) => (
                                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Link to={ Paths[page].route }>
-                                        <Typography textAlign="center">{Paths[page].label}</Typography>
-                                    </Link>
+                                    <Typography textAlign="center">
+                                        <MUILink
+                                            component={ Link }
+                                            to={ Paths[page].route }
+                                            textAlign="center"
+                                            color='inherit'
+                                            sx={{ textDecoration: 'none' }}
+                                        >
+                                            {Paths[page].label}
+                                        </MUILink>
+                                    </Typography>
                                 </MenuItem>
                             ) )}
                         </Menu>
                     </Box>
 
                     <Typography
+                        // component={ Link }
+                        // to={ '/' }
                         variant="h6"
                         noWrap
-                        component="div"
                         sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
                     >
                         {/* WIP Modificar esto por Button, Link, IconButton o lo q sea correcto, talvez sea necesario q la clase en mobile sea tratada distinta y en vez de especificar el tamaño de la imagen q el contenedor se ajuste al tamaño de la nav y la imagen al tamaño de su contenedor */}
@@ -106,9 +117,17 @@ export default function Navbar() {
                                 onClick={handleCloseNavMenu}
                                 sx={{ my: 2, color: 'white', display: 'block' }}
                             >
-                                <Link to={ Paths[page].route }>
-                                    <Typography textAlign="center">{Paths[page].label}</Typography>
-                                </Link>
+                                <Typography textAlign="center">
+                                    <MUILink
+                                        component={ Link }
+                                        to={ Paths[page].route }
+                                        textAlign="center"
+                                        color='inherit'
+                                        sx={{ textDecoration: 'none' }}
+                                    >
+                                        {Paths[page].label}
+                                    </MUILink>
+                                </Typography>
                             </Button>
                         ) )}
                     </Box>

@@ -28,6 +28,7 @@ export default function ItemDetail( { itm } ) {
                     textAlign: 'center',
                     writingMode: 'vertical-lr',
                     transform: 'rotate(-180deg)',
+                    color: MUIColors.common.white,
                     bgcolor: MUIColors[Categories[itm.cat].color][200]
                 }}
             >

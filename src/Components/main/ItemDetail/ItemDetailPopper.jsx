@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -15,9 +16,13 @@ export default function ItemDetailPopper( { itm } ) {
     const [ open, setOpen ] = useState( false );
     const id = open ? 'simple-popper' : undefined;
 
+    let navigate = useNavigate();
+
     const handleClick = ( evt ) => {
         setAnchorEl( evt.currentTarget );
         setOpen( open ? false : true );
+        navigate( `/item/${ itm.id }` ); // Necesito manipular el path con el import de Paths, al menos la parte de item para q sea consistente en todos lados, y ver si agregar la category
+        // probar ./itemId
     };
 
     const handleClickAway = () => {

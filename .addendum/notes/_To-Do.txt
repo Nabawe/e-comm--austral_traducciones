@@ -14,13 +14,13 @@
 + Change all Logos and Favicons to svg or webp
 
 
-+ Fix Logo, Remove <Typography />
-
-
 + Modificar index.css
 
 
 + Limpiar index.html
+
+
++ Add Ritch Text, like colored money signs, etc.
 
 
 + [feature, localization] q los mensajes sean el resultado de una funcion q reciva los parametros variables y retorne la string con el mensaje a mostrar. Las opciones q se me ocurren son:

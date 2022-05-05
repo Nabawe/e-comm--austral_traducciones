@@ -22,7 +22,8 @@ export default function App() {
 
                 <main>
                     <Routes>
-                        <Route path='/item/:itemId' element={ <ItemDetailContainer /> } />
+                        {/* <Route path='/item/:itemId' element={ <ItemDetailContainer /> } /> */}
+                        <Route path='/item/:itemId' element={ <ItemListContainer /> } />
                         <Route path='/' element={ <ItemListContainer /> } />
                         <Route path='/contact' element={ <p> Make Contact !!! </p> } />
                         <Route path='/category/:categoryId' element={ <ItemListContainer /> } />

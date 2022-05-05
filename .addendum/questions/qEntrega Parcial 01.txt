@@ -1,5 +1,7 @@
 + Necesidad de JSON Parse?
 + Doc Strings
++ useNavigate
++ Sobre declarar DONDE const, vars, etc
 
 
 
@@ -8,8 +10,13 @@
 
 
 
+va a funcionar mas o menos como lo plantie y usaria el fetchItem solo cuando se coloca el id manualmente en la URL
 
+>>>>>>>>>>>> Lo primero a hacer es ver como utilizar links y o botones o links con el estilo de un boton, esta tambien el mecanismo useNavigation q seguramente se podria disparar desde un boton.
 
+>>>>>>>> hacer el boton de home, investigar sobre los icons
+
+- Pasar las rutas a relativas
 
 
 !! la razon de no pasar el item completo a ItemList es para no pasar info no usada, como desc_long
@@ -17,10 +24,15 @@
         Hacerlo asi para la entrega esta y modificarlo para la final
 
 ! Conciderar sacar poper e itemdetail y armar componente ItemPage
+    esto me confundio pensando en algo q se muestra en mouseover con mas detalle y algo q muestra una pagina para un solo item
 
 Al mostrar un solo item q el popper sea mas grande y proporcioan y se ajuste al centro de la pantalla.
 
 Conciderar si al mostrar un solo item tambien se ajusta la url a la categoria correspondiente.
+    /url/:catId/:itemId
+    VS
+    /url/:itemId
+        Este ultimo tambien se aplicaria si un solo item tiene multiples categorias, aunque las categorias deberian intentar ser una relacion unica y las tags multiples
 
 Ver como utilizar los Links de MUI y emprolijar en Navbar.jsx y finalmente combertir el logo en un link.
 
@@ -66,4 +78,19 @@ Decir q no borraste comentarios por las preguntas.
     Como debería marcar correctamente los argumentos Opcionales? Y el Return?
     ejemplo en f_fetchItem VS Code me marca un ? en los opcionales pero no es muy claro y no me muestra el tipo de dato del return.
     Una buena guia para docstrings? tipo una cheat sheet y o alguna extención recomendada? aunque si tengo el cursor sobre el nombre de la funcion y typeo /** VS Code me auto completa bastante. Raro q no haya alguna keybind para no depender del Mouse.
++
+
+
++ useNavigate
+    En la doc de React DOM declaran usando let navigate, porque no usar const?.
++
+
+
++ Sobre declarar DONDE const, vars, etc
+    Cuales son exactamente todas las diferencias entre declarar una variable o funcion:
+    1 - directamente debajo del import
+    2 - dentro de la funcion principal del componente
+    3 - en el return o render
+
+    Tengo mis nociones pero quiciera saberlo con mayor exactitud, sino un link a la doc apropiada. En especial la diferencia entre 1 y 2
 +
