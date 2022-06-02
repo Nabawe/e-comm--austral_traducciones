@@ -206,3 +206,16 @@ console.log( ColorWeight );
 */
 
 // Redes de Informacion Entrelazadas
+
+/* Minifier -> Tabulator -> Ponderator | Weighter -> Fingerprint Generator -> Compresser */
+/* Minifier : Just like in JavaScript */
+/* Trabulator : Acomoda las expresiones de una forma consistente, al estilo if localVar === primitiveValue ( like true ) */
+/* El ponderador hace una pre conversion del output anterior asignando valores unicos y relevancia. Es una expresion más general de la logica pero extenciva, q permita relacionarse y hacer busquedas más precisas, largas y pesadas */
+/* Fingerprint Generator lo hace pasar para intentar generar una expresion unica.*/
+/* De ser muy grande la expresion anterior intentar lograr comprimirla, ver si este o la Fingerprint son suficientes para permitir hacer busquedas, relaciones de forma acelerada */
+
+
+/* Uso de tecnicas de electronica para reducir la logica y tamaño de circuitos combinado con lo anterior. */
+
+
+/* Luego el Engine aplica Patrones de Diseño y Arquitectura y cosas tipo Model View Controller para deglosar, clasificar y relacionar lo analizado.  */

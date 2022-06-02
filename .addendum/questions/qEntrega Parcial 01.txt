@@ -3,12 +3,14 @@
 + useNavigate
 + Sobre declarar DONDE const, vars, etc
 + Cuando otros componentes se disfrazan de Link
-
-
++ mui-image import error
 
 
 - Pasar las rutas a relativas, anidadas y defaults (index)
     Hacer esto y arreglar el tema q al seleccionar item detail se borra el filtro de category
+
+
+- Make Consistent MUIColors.common.white vs g_Styles colors
 
 
 va a funcionar mas o menos como lo plantie y usaria el fetchItem solo cuando se coloca el id manualmente en la URL
@@ -116,4 +118,17 @@ Escribir en los principios sobre esto:
     Esto mayoriatariamente parece ser por temas de Accesibilidad y CEO, pero me pasa q en realidad yo quiero q la base sea el otro componente y q este tome la funcionalidad de los Links ya q no es solo como se ve sino como se siente ( hover, efectos, etc ).
 
     Cual seria la forma correcta de proceder?
++
+
+
++ mui-image import error
+    Item.jsx
+    VS Code me tira:
+        "Could not find a declaration file for module 'mui-image'. 'node_modules/mui-image/lib/index.js' implicitly has an 'any' type.
+        Try `npm i --save-dev @types/mui-image` if it exists or add a new declaration (.d.ts) file containing `declare module 'mui-image';`ts(7016)"
+
+    No tengo idea como solucionarlo.
+    No estoy seguro de la eficacia y posibilidad de q me llene de packetes del comando q me sugiere usar.
+    No se si se podria solucionar modificando public/manifest.json.
+    No se si creando la capeta /types/mui-image (en el root del projecto) con index.d.ts se aplica a esto, ya q no se si en realidad es algo de TypeScript.
 +
